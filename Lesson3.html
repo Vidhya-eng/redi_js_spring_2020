@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>My Simple Html Page</title>
+        <link rel="stylesheet" type="text/css" href=/>
+    </head>
+    <body>
+        <p>How are You</p>
+        <button id="goodButton">Good😃</button>
+        <button id="badButton">Bad😞</button>
+        <button id ="awsomeButton">Awsome😍</button>
+        <p id ="answer"></p>
+        <script>
+            let goodButtonCmp = document.getElementById("goodButton");
+            let badButtonCmp =document.getElementById("badButton")
+            let awsomeButtonCmp = document.getElementById("awsomeButton")
+            let answerCmp = document.getElementById("answer");
+            function goodButtonClick(event){
+                answerCmp.textContent= "That's great 😃"
+            }
+            function badButtonClick(event){
+                answerCmp.textContent= "Oh that's sad 😞"
+            }
+            function awsomeButtonClick(event){
+                answerCmp.textContent = "Wow !! It's Awsome😍"
+            }
+
+            goodButtonCmp.addEventListener("click",goodButtonClick);
+            badButtonCmp.addEventListener("click",badButtonClick);
+            awsomeButtonCmp.addEventListener("click",awsomeButtonClick);
+
+        </script>
+    </body>
+    </html>

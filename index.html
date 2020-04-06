@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>My Simple Base Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Allan|Asap+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header class="navigation" >
+                <button id="burgerBtn"><i class="fa fa-bars"></i></button>
+                <nav> <a href >Home</a></nav>
+               <nav> <a href>About me</a></nav>
+               <nav class="base"> <a href="#index.html">Base Page</a></nav>
+            
+        </header><br><br>
+        <div>
+            <section class ="first Section">
+                <h2>Olympia-Einkaufzentrum</h2>
+                <img src="https://www.stadtrundfahrt.com/upload/system/experience/5334382be34a0.jpg" width="600" height="400">
+                <p>My Favourite hangout location with my friends and my second home.I do miss going there and having some crunchy food.</p>
+                <p>For more information,You can check here: <a href="https://www.google.com/maps/place/Olympia-Einkaufszentrum/@48.1820196,11.528182,17z/data=!3m1!4b1!4m5!3m4!1s0x479e76f7aa7746fd:0x9826f247e7093dbb!8m2!3d48.1820196!4d11.5303707">Location</a></p>
+
+            </section><br><br>
+            <section class="second Section">
+                <h2>Indian Mango</h2>
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/3f/97/0c/indian-mango.jpg" width="600" height="400">
+                <p>The taste of delicious authentic indian food is worth replenishing</p>
+                <p>For more Information ,You can check here: <a href="https://www.google.com/maps/place/Indian+Mango/@48.1328557,11.5841937,15z/data=!4m2!3m1!1s0x0:0xa4407297016e02d5?sa=X&ved=2ahUKEwimg7bF5cToAhXk-SoKHdJwB-gQ_BIwFHoECBEQCw">Location</a></p>
+            </section><br><br>
+            <section class ="third Section">
+                <h2>Deutsche Akademie</h2>
+                <img src ="https://www.deutschakademie.com/neu/wp-content/uploads/2014/04/Gerda-A21-9-Uhr.jpg" width="600" height="400">
+                <p>I do miss being with my friends and cool teachers, and those days of hanging out and sharing food together.</p>
+                <p>For more information,You can check here:<a href="https://www.google.com/maps/uv?hl=en&pb=!1s0x479e758ab54f5711%3A0x6b9f7e4925985bcf!3m1!7e115!4s%2Fmaps%2Fplace%2Fdeutsche%2Bakademie%2Bmunich%2Bgoogle%2Bmaps%2F%4048.1374019%2C11.5629028%2C3a%2C75y%2C16.36h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sIE2tWGdarkyHykTuTSC9Ow*212e0*214m2*213m1*211s0x479e758ab54f5711%3A0x6b9f7e4925985bcf%3Fsa%3DX!5sdeutsche%20akademie%20munich%20google%20maps%20-%20Google%20Search!15sCAQ&imagekey=!1e2!2sIE2tWGdarkyHykTuTSC9Ow&sa=X&ved=2ahUKEwje7fv75sToAhXcxMQBHVumBP8Qpx8wCnoECBEQCw">Location</a></p>
+            </section>
+        </div><br><br>
+        <footer class ="endDescription">
+            <p>Made by Vidhya for Redi : Frontend-Development2</p>
+        </footer>
+        <script>
+            let burgerBtnCmp = document.getElementById("burgerBtn");
+            function burgerBtnClick(event){
+               let name = prompt("Which is your favorite place in munich ?");
+               alert("Your Favorite place in Munich is " + name);
+
+            }
+            burgerBtnCmp.addEventListener("click",burgerBtnClick);
+        </script>
+    </body>
+</html>
