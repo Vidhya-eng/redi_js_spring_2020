@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Add new Elements</title>
+        <link rel="stylesheet" type="text/css" href="style1.css"/>
+    </head>
+    <body>
+        <ul id ="numberList">
+            
+        </ul>
+        <p class ="add">+</p>
+            <input  type =" number" name="number"  id ="numbervalue">
+            <button id ="addme">Add Me !</button>
+            <p id ="result"></p>
+        
+
+        <script>
+            const numberListCmp =document.getElementById("numberlist");
+            const numberInputCmp = document.getElementById("numbervalue");
+            const addButtonCmp = document.getElementById("addme");
+            const resultCmp = document.getElementById("result");
+let sum = 0;
+            function addNumber () {
+                const number = numberInputCmp.value;
+                const numberValueList = document.createElement("li");
+                numberValueList.textContent = number ;
+                numberListCmp.appendChild(numberValueList) ;
+                numberInputCmp.value ='';
+                
+
+            }
+            function finalResult () {
+                const num = parseFloat( numberInputCmp.value);
+                sum = sum + num ;
+                resultCmp.textContent = sum ;
+                
+
+            } numberInputCmp.addEventListener("change",finalResult); 
+           
+            addButtonCmp.addEventListener("click",addNumber);
+           
+        </script>
+    </body>
+</html>

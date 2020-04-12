@@ -1,0 +1,24 @@
+#numberList li{
+    text-decoration: none;
+    margin-left : 1500px;
+}
+#numbervalue{
+    position : relative;
+    top : 500px;
+    left: 700px;
+}
+#addme{
+    position : relative;
+    top : 500px;
+    left: 720px;
+}
+.add{
+    position : relative;
+    top : 470px;
+    left: 650px;
+}
+#result{
+    position : relative;
+    top : 400px;
+    left: 670px;
+}
