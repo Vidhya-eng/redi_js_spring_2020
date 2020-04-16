@@ -1,0 +1,20 @@
+
+.button-shape {
+border-radius: 50%;
+}
+
+.btn-postn{
+    text-align: center;
+    margin-top: 250px;
+}
+#awsome{
+    height:200px;
+    width:200px;
+    background-color: royalblue;
+   
+    font-size: 30px;
+}
+.original-color {
+    background-color: lawngreen;
+    color: hotpink;
+}

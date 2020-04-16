@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Mouse leave and over event</title>
+        <link rel="stylesheet" type="text/css" href="style5.css">
+    </head>
+    <body>
+        <div id ="newBtn"></div>
+        <div class="btn-postn"><button id ="awsome">Just-Awsome</button></div>
+        
+        <script>
+            let awsmBttnCmp = document.getElementById("awsome");
+            let newCmp = document.getElementById("newBtn");
+            const label = "Im Awsome" ;
+             function onClick(event){
+                 console.log("Hey!! Be positive");
+             }
+             function mouseOverHandler (event){
+                 console.log("You are here");
+                 awsmBttnCmp.innerText = "Be Awsm" ;
+                 awsmBttnCmp.classList.add("original-color");
+                 awsmBttnCmp.classList.add("button-shape");
+                 let bttnNew = document.createElement("BUTTON");
+                 bttnNew.innerText = "Stay Calm" ;
+                 newCmp.appendChild(bttnNew); 
+                 p.style.display="block";
+
+
+             }
+             function mouseLeaveHandler (event){
+                 console.log("uh oh!! You just left");
+                 awsmBttnCmp.innerText = label ;
+                 awsmBttnCmp.classList.remove("original-color");
+                 awsmBttnCmp.classList.remove("button-shape");
+                 newCmp.removeChild(bttnNew);
+
+             }
+             awsmBttnCmp.addEventListener("click",onClick);
+             awsmBttnCmp.addEventListener("mouseover",mouseOverHandler);
+             awsmBttnCmp.addEventListener("mouseleave",mouseLeaveHandler);
+
+        </script>
+    </body>
