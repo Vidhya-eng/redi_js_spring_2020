@@ -1,43 +1,34 @@
 <html>
     <head>
-        <title>Add new Elements</title>
-        <link rel="stylesheet" type="text/css" href="style1.css"/>
+        <title>Class Work</title>
     </head>
     <body>
-        <ul id ="numberList">
-            
-        </ul>
-        <p class ="add">+</p>
-            <input  type =" number" name="number"  id ="numbervalue">
-            <button id ="addme">Add Me !</button>
-            <p id ="result"></p>
-        
-
+        <ul id ="numberList"></ul>
+        <input type ="text" name="number" id ="numberInput">
+        <button id ="addNumber">Add Number</button>
+        <p id ="ans"></p>
         <script>
-            const numberListCmp =document.getElementById("numberlist");
-            const numberInputCmp = document.getElementById("numbervalue");
-            const addButtonCmp = document.getElementById("addme");
-            const resultCmp = document.getElementById("result");
+            const numberListCmp = document.getElementById("numberList");
+            const numberInputCmp = document.getElementById("numberInput");
+            const addNumberCmp = document.getElementById("addNumber");
+            const ansList = document.getElementById("ans");
 let sum = 0;
-            function addNumber () {
-                const number = numberInputCmp.value;
-                const numberValueList = document.createElement("li");
-                numberValueList.textContent = number ;
-                numberListCmp.appendChild(numberValueList) ;
-                numberInputCmp.value ='';
-                
+            function addNumberResult () {
+                const numberValue = numberInputCmp.value;
+                const numberNew = document.createElement("li");
+                numberNew.textContent = numberValue ;
+                numberListCmp.appendChild(numberNew);
+                numberInputCmp.value = "" ;
 
             }
-            function finalResult () {
-                const num = parseFloat( numberInputCmp.value);
-                sum = sum + num ;
-                resultCmp.textContent = sum ;
-                
+            function add () {
+                const numberFirst = parseFloat(numberInputCmp.value) ;
+                sum = sum + numberFirst ;
+                ansList.textContent = sum ;
+            }
+            numberInputCmp.addEventListener("change",add);
+            addNumberCmp.addEventListener("click",addNumberResult);
 
-            } numberInputCmp.addEventListener("change",finalResult); 
-           
-            addButtonCmp.addEventListener("click",addNumber);
-           
         </script>
     </body>
 </html>
