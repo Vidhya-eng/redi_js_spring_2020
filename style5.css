@@ -2,7 +2,9 @@
 .button-shape {
 border-radius: 50%;
 color: hotpink;
+background-color: royalblue;
 }
+
 
 .btn-postn{
     text-align: center;
@@ -13,10 +15,6 @@ color: hotpink;
     height:200px;
     width:200px;
     font-size: 30px;
-}
-
-.button-hover{
-    background-color: royalblue;
 }
 
 .button-original{
