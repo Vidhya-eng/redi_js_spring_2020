@@ -1,6 +1,19 @@
 <html>
     <head>
         <title>My Simple Base Page</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Allan|Asap+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header class="navigation" >
+                <button id="burgerBtn"><i class="fa fa-bars"></i></button>
+                <nav> <a href >Home</a></nav>
+               <nav> <a href>About me</a></nav>
+               <nav class="base"> <a href="#index.html">Base Page</a></nav>
+            
+
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <link href="https://fonts.googleapis.com/css?family=Allan|Asap+Condensed&display=swap" rel="stylesheet">
     </head>
@@ -11,6 +24,7 @@
                <li> <a href>About me</a></li>
                <li  class="base"> <a href="#index.html">Base Page</a></li>
             </ul>
+
         </header><br><br>
         <div>
             <section class ="first Section">
@@ -36,5 +50,16 @@
         <footer class ="endDescription">
             <p>Made by Vidhya for Redi : Frontend-Development2</p>
         </footer>
+
+        <script>
+            let burgerBtnCmp = document.getElementById("burgerBtn");
+            function burgerBtnClick(event){
+               let name = prompt("Which is your favorite place in munich ?");
+               alert("Your Favorite place in Munich is " + name);
+
+            }
+            burgerBtnCmp.addEventListener("click",burgerBtnClick);
+        </script>
+
     </body>
 </html>
