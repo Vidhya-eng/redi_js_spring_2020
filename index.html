@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>My Simple Base Page</title>
+
         <link rel="stylesheet" type="text/css" href="style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Allan|Asap+Condensed&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,6 +13,18 @@
                <nav> <a href>About me</a></nav>
                <nav class="base"> <a href="#index.html">Base Page</a></nav>
             
+
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Allan|Asap+Condensed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navigation" >
+            <ul>
+               <li> <a href >Home</a></li>
+               <li> <a href>About me</a></li>
+               <li  class="base"> <a href="#index.html">Base Page</a></li>
+            </ul>
+
         </header><br><br>
         <div>
             <section class ="first Section">
@@ -37,6 +50,7 @@
         <footer class ="endDescription">
             <p>Made by Vidhya for Redi : Frontend-Development2</p>
         </footer>
+
         <script>
             let burgerBtnCmp = document.getElementById("burgerBtn");
             function burgerBtnClick(event){
@@ -46,5 +60,6 @@
             }
             burgerBtnCmp.addEventListener("click",burgerBtnClick);
         </script>
+
     </body>
 </html>
