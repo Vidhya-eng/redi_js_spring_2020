@@ -71,9 +71,27 @@ const dressList = [
 
 
     
+function dressListInput (){
+    for (let i=0 ; i<dressList.length ; i++){
+        const dressElementDescr = document.createElement("div")
+        dressElementDescr.innerHTML =`<li> <h5>${dressList[i].name}</h5>
+    <img  class ="dressImage" src="${dressList[i].imageUrl}" />
+    <p>${dressList[i].description}</p>
+    <p>Price:${dressList[i].Price}</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <p>Delivery Cost :${dressList[i].shippingCost.cost.deliveryCharge}</p>
+    <button id="dressBtn">Add to Shopping Cart </button>
+    </li>`; 
+    
+dressListCmp.appendChild(dressElementDescr);
+    }
+    
+}
+dressListInput();
 
-
-    dressListCmp.innerHTML = `
+    /* dressListCmp.innerHTML = `
     <li>
     <h5>${dressList[0].name}</h5>
     <img  class ="dressImage" src="${dressList[0].imageUrl}" />
@@ -122,58 +140,69 @@ const dressList = [
     <p>Delivery Cost :${dressList[3].shippingCost.cost.deliveryCharge}</p>
     <button id="fourthBtn">Add to Shopping Cart </button>
     </li>` ;
+ */
 
-    let showCart = [] ;
+ let showCart = [] ;
 
-    function addFirstItem (){
+ function addNewItem (){
+     for(let i=0; i<dressList.length; i++){
+         showCart.push(dressList[i].name);
+         showCart.push(dressList[i].Price);
+     }
+     console.log(showCart);
+ };
+ 
+/* function addFirstItem (){
 showCart.push({
-    dressName : dressList[0].name,
-    dressPrice : dressList[0].Price
+dressName : dressList[0].name,
+dressPrice : dressList[0].Price
 })
-    };
-    function addSecondItem (){
+};
+function addSecondItem (){
 showCart.push({
-    dressName : dressList[1].name,
-    dressPrice : dressList[1].Price
+dressName : dressList[1].name,
+dressPrice : dressList[1].Price
 })
-    };
-    function addThirdItem (){
+};
+function addThirdItem (){
 showCart.push({
-    dressName : dressList[2].name,
-    dressPrice : dressList[2].Price
+dressName : dressList[2].name,
+dressPrice : dressList[2].Price
 })
-    };
-    function addFourthItem (){
+};
+function addFourthItem (){
 showCart.push({
-    dressName : dressList[3].name,
-    dressPrice : dressList[3].Price
+dressName : dressList[3].name,
+dressPrice : dressList[3].Price
 })
-    };
-    document.getElementById("firstBtn").addEventListener("click",addFirstItem);
-    document.getElementById("secondBtn").addEventListener("click",addSecondItem);
-    document.getElementById("thirdBtn").addEventListener("click",addThirdItem);
-    document.getElementById("fourthBtn").addEventListener("click",addFourthItem);
+}; */
+document.getElementById("dressBtn").addEventListener("click",addNewItem);
+document.getElementById("dressBtn").addEventListener("click",addNewItem);
 
-    function addShoppingCartList (){
-        let showListCmp = document.getElementById("showList");
-        for(let i=0 ; i<showCart.length ; i++){
+
+function addShoppingCartList (){
+    let showListCmp = document.getElementById("showList");
+    for(let i=0 ; i<showCart.length ; i++){
 let newShowList = document.createElement("div")
-newShowList.innerHTML = `<span>${showCart[i].dressName}</span> <span>${showCart[i].dressPrice}</span>`;
+newShowList.innerHTML = `<span>${showCart[i].dressName}</span> <span>${showCart[i].dressPrice}</span>`
+;
 showListCmp.appendChild(newShowList);
 
-        }
-    };
-      document.getElementById("shoppingListBtn").addEventListener("click",addShoppingCartList);
+    }
+};
 
-      function showTotalPrice (){
-          let totalPrice = 0 ;
-          for(let i=0 ;  i<showCart.length ; i++){
-              totalPrice+= parseFloat(showCart[i].dressPrice) ;
-          }
-          document.getElementById("totalPrice").innerHTML = `Total Price : ${totalPrice} €` ;
-      };
-      document.getElementById("finalPriceBtn").addEventListener("click",showTotalPrice);
+  document.getElementById("shoppingListBtn").addEventListener("click",addShoppingCartList);
 
+  function showTotalPrice (){
+      let totalPrice = 0 ;
+      for(let i=0 ;  i<showCart.length ; i++){
+          totalPrice+= parseFloat(showCart[i].dressPrice) ;
+      }
+      document.getElementById("totalPrice").innerHTML = `Total Price : ${totalPrice} €` ;
+  };
+  document.getElementById("finalPriceBtn").addEventListener("click",showTotalPrice);
+
+   
         </script>
         
     </body>
