@@ -56,6 +56,7 @@ function dressListInput() {
     <p>${dressList[i].description}</p>
     <p>Price:${dressList[i].price}</p>
     <span>${dressList[i].rating}</span>
+    ${createStars(dressList[i].rating)}
     <p>Delivery Cost :${dressList[i].shippingCost.cost.deliveryCharge}</p>
     </li>`;
         dressElementDescr.classList.add("dressDescription");
@@ -77,19 +78,22 @@ function dressListInput() {
                 document.getElementById("selectDress").innerHTML = "Out of Stock";
             }
         });
-        /* How can i add stars here to the property rating */
-        {
-            /* <span class="fa fa-star unchecked" id=”two”></span>
-                    <span class="fa fa-star unchecked" id=”three”></span>
-                    <span class="fa fa-star unchecked" id=”four”></span> */
-        }
-        /* I want to add stars like this to my property rating */
-        function createStars() {
 
+        function createStars(starCount) {
+            const maxHearts = 5; // the max rating possible
+            const unFilledStars = maxHearts - starCount; //. the number of unchecked stars
+            let html = ''; // using let because we are going to add to this variable 
+            // loop through star count a create the html for check stars
+            for (let i = 0; i < starCount; i++) {
+                html += '<span class="fa fa-star checked"></span>';
+            }
 
-        }
+            for (let i = 0; i < unFilledStars; i++) {
 
-
+                html += '<span class="fa fa-star unchecked"></span>';
+            }
+            return html;
+        };
         const totalListDisplayBtnEle = document.getElementById("totalListBtn");
         const addToCartBtn = document.createElement('button');
         addToCartBtn.addEventListener('click', function() {
@@ -106,8 +110,6 @@ function dressListInput() {
     }
 }
 dressListInput();
-
-
 
 function addShoppingCartList() {
     let showListCmp = document.getElementById("showList");
