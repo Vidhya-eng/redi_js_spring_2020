@@ -27,6 +27,14 @@ ul p {
     height: 300px;
 }
 
+checked {
+    color: red;
+}
+
+.unchecked {
+    color: black;
+}
+
 .dressDescription {
     margin-left: 20px;
 }
