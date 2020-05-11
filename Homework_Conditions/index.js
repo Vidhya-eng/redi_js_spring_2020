@@ -7,7 +7,7 @@ const dressList = [{
         name: "Women's Dress Sleeveless",
         description: " Sleeveless Cocktail Dresses till Knee Length",
         price: "37€",
-        rating: document.getElementById("fourStars"),
+        rating: 4,
         shippingCost: {
             cost: freeShipping
         }
@@ -17,7 +17,7 @@ const dressList = [{
         name: "Women's Maxi Floral dress",
         description: " Multicolored casual Floral dress with line",
         price: "25€",
-        rating: document.getElementById("threeStars"),
+        rating: 3,
         shippingCost: {
             cost: freeShipping
         }
@@ -27,7 +27,7 @@ const dressList = [{
         name: "Women's Summer dress",
         description: " Long Casual Elegant Dresses Party Dress ",
         price: "35€",
-        rating: document.getElementById("fiveStars"),
+        rating: 5,
         shippingCost: {
             cost: freeShipping
         }
@@ -37,7 +37,7 @@ const dressList = [{
         name: "Women's Nightie",
         description: " Short,pleasantly loose cut ,100% cotton",
         price: "15€",
-        rating: document.getElementById("threeStars"),
+        rating: 4,
         shippingCost: {
             cost: freeShipping
         }
@@ -77,45 +77,18 @@ function dressListInput() {
                 document.getElementById("selectDress").innerHTML = "Out of Stock";
             }
         });
-
+        /* How can i add stars here to the property rating */
+        {
+            /* <span class="fa fa-star unchecked" id=”two”></span>
+                    <span class="fa fa-star unchecked" id=”three”></span>
+                    <span class="fa fa-star unchecked" id=”four”></span> */
+        }
+        /* I want to add stars like this to my property rating */
         function createStars() {
 
 
         }
 
-
-        /* created a select tag for selecting the amount and displaying the image */
-        /* const newAmount = document.createElement("div");
-        newAmount.innerText = "Amount :"
-        const myAmountList = document.getElementById("myAmount")
-        const selectList = document.createElement("select");
-        selectList.id = "mySelect";
-        selectList.name ="selectFirst";
-        myAmountList.appendChild(newAmount);
-        newAmount.appendChild(selectList); */
-
-
-        /* for(let i=0; i<amount.length; i++){
-           const myOption = document.createElement("option");
-           myOption.value = amount[i];
-           myOption.text= amount[i];
-           selectList.appendChild(myOption);
-             }; */
-        /*  tried to get the option value But not working */
-        /*  let optionValue = selectList.myOption[selectList.selectedIndex].value; */
-        /* conditional statement while the option changes,not working */
-        /* selectList.addEventListener("change",function selectNewOption(){
-          if(optionValue== 1){
-              document.getElementById("selectDress").innerText ="Last Chance";
-          }elseif (optionValue<1){
-              document.getElementById("selectDress").innerText ="Out of Stock";
-          }
-          elseif (optionValue<=3){
-              document.getElementById("selectDress").innerText ="Almost out of Stock";
-          }elseif (optionValue>3){
-              document.getElementById("selectDress").innerText ="In Stock";
-          }
-             }); */
 
         const totalListDisplayBtnEle = document.getElementById("totalListBtn");
         const addToCartBtn = document.createElement('button');
