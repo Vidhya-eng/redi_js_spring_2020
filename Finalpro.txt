@@ -1,0 +1,4 @@
+Final Project theme
+Weather App
+
+I would like to create a weather app that accepts input from the user in the form of place names and displays the weather of the respective locations,Since it uses Api,is it possible to create an app in this semester?
