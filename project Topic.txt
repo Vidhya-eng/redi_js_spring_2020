@@ -1,0 +1,7 @@
+Project Topic.
+Weather App
+
+
+I would like to create a weather App,Where there would be a input,where i can enter the location and when it is submitted
+The weather of the respective Location would be displayed.As it uses Api in order to get request....is it really difficult to create 
+such an App and is it ok to use Api in this project
