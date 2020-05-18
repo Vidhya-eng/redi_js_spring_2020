@@ -1,0 +1,86 @@
+.main {
+    background-color: #f7f7f7;
+}
+
+span {
+    color: red;
+}
+
+.list {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style: none;
+    padding: 8px;
+}
+
+ul p {
+    width: 100%;
+    text-align: justify;
+}
+
+.dressImage {
+    width: 310px;
+    height: 300px;
+}
+
+.checked {
+    color: red;
+}
+
+.unchecked {
+    color: black;
+}
+
+.dressDescription {
+    margin-left: 20px;
+}
+
+.dressDescription:nth-child(even) {
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 5px 5px grey;
+}
+
+.dressDescription:nth-child(odd) {
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 5px 5px grey;
+}
+
+h5 {
+    text-align: center;
+}
+
+.btn {
+    margin-left: 50%;
+}
+
+#showList {
+    margin-left: 50%;
+}
+
+#totalListBtn {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 8px;
+}
+
+.cartBtn {
+    width: 150px;
+    height: 50px;
+}
+
+.cartBtn:nth-child(2) {
+    margin-left: 120px;
+    position: relative;
+    bottom: 0px;
+}
+
+.cartBtn:nth-child(odd) {
+    margin-left: 15px;
+}
