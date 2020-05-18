@@ -27,7 +27,7 @@ ul p {
     height: 300px;
 }
 
-checked {
+.checked {
     color: red;
 }
 
@@ -75,32 +75,12 @@ h5 {
     height: 50px;
 }
 
-.cartBtn:nth-child(even) {
-    padding-left: 50px;
-    margin-left: 100px;
-}
-
-
-/* cartBtn:nth-child(odd) {
-    margin-left: 160px;
-} */
-
-#myAmount {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.inputEle:nth-child(2) {
-    margin-left: 150px;
-}
-
-.inputEle:nth-child(4) {
+.cartBtn:nth-child(2) {
+    margin-left: 120px;
     position: relative;
-    left: 125px;
+    bottom: 0px;
 }
 
-.inputEle:nth-child(odd) {
-    margin-left: 60px;
+.cartBtn:nth-child(odd) {
+    margin-left: 15px;
 }

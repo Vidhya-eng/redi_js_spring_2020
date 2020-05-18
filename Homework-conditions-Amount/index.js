@@ -7,6 +7,7 @@ const dressList = [{
         name: "Women's Dress Sleeveless",
         description: " Sleeveless Cocktail Dresses till Knee Length",
         price: "37€",
+        amount: 4,
         rating: 4,
         shippingCost: {
             cost: freeShipping
@@ -17,6 +18,7 @@ const dressList = [{
         name: "Women's Maxi Floral dress",
         description: " Multicolored casual Floral dress with line",
         price: "25€",
+        amount: 3,
         rating: 3,
         shippingCost: {
             cost: freeShipping
@@ -27,6 +29,7 @@ const dressList = [{
         name: "Women's Summer dress",
         description: " Long Casual Elegant Dresses Party Dress ",
         price: "35€",
+        amount: 6,
         rating: 5,
         shippingCost: {
             cost: freeShipping
@@ -37,6 +40,7 @@ const dressList = [{
         name: "Women's Nightie",
         description: " Short,pleasantly loose cut ,100% cotton",
         price: "15€",
+        amount: 5,
         rating: 4,
         shippingCost: {
             cost: freeShipping
@@ -60,25 +64,16 @@ function dressListInput() {
     
     </li>`;
         dressElementDescr.classList.add("dressDescription");
-        const myAmountList = document.getElementById("myAmount");
-        const newAmount = document.createElement("input");
-        newAmount.type = "number";
-        newAmount.classList.add("inputEle")
-        newAmount.placeholder = "Enter the required Amount";
-        myAmountList.appendChild(newAmount);
-        console.log(newAmount.value);
-        newAmount.addEventListener("change", function newValueSel() {
-            if (newAmount.value > amountArray[3]) {
-                document.getElementById("selectDress").innerHTML = "In Stock";
-            } else if (newAmount.value == amountArray[3] && newAmount.value > 1) {
-                document.getElementById("selectDress").innerHTML = "Almost Out of Stock";
-            } else if (newAmount.value == amountArray[1]) {
-                document.getElementById("selectDress").innerHTML = "Last Chance";
-            } else if (newAmount.value == amountArray[0]) {
-                document.getElementById("selectDress").innerHTML = "Out of Stock";
-            }
-        });
 
+        if (dressList[i].amount < 1) {
+            dressElementDescr.innerHTML += "<p>This product is currently out of stock / not available.</p>";
+        } else if (dressList[i].amount === 1) {
+            dressElementDescr.innerHTML += "<p> Last chance! Only 1 more left in stock! </p>";
+        } else if (dressList[i].amount > 1 && dressList[i].amount <= 3) {
+            dressElementDescr.innerHTML += `<p style= "margin-left:5px"> We have only ${dressList[i].amount} pieces left. Hurry up! </p>`;
+        } else {
+            dressElementDescr.innerHTML += `<p style= "margin-left:5px; width:350px"> This product is currently available, ${dressList[i].amount}  in stock. </p>`;
+        }
         const totalListDisplayBtnEle = document.getElementById("totalListBtn");
         const addToCartBtn = document.createElement('button');
         addToCartBtn.addEventListener('click', function() {
@@ -104,7 +99,6 @@ function createStars(starCount) {
     for (let i = 0; i < starCount; i++) {
         html += '<span class="fa fa-star checked"></span>';
     }
-
     for (let i = 0; i < unFilledStars; i++) {
 
         html += '<span class="fa fa-star unchecked"></span>';
@@ -114,6 +108,7 @@ function createStars(starCount) {
 
 function addShoppingCartList() {
     let showListCmp = document.getElementById("showList");
+    showListCmp.innerHTML = '';
     for (let i = 0; i < showCart.length; i++) {
         let newShowList = document.createElement("div")
         newShowList.innerHTML = `<span>${showCart[i].newDress}${showCart[i].newPrice}</span>`;
